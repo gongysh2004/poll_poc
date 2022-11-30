@@ -1,0 +1,12 @@
+<form action="{% url 'polls:create_post' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>Create your own question</h1></legend>
+            <input type="text" name="question_text" id="question_text" value="your question text?">
+            <label for="question_text">Quest Text:</label><br>
+            <input type="datetime-local" name="pub_date" id="pub_date">
+            <label for="pub_date">Pub date:</label><br>           
+    </fieldset>
+    <input type="submit" value="Create one question">
+
+</form>
